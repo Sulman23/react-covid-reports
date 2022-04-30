@@ -20,7 +20,7 @@ const AddPatients = () => {
                 <label for="address" class="form-label">Address</label>
                 <textarea class="form-control" id="address" rows="3"></textarea>
             </div>  
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="submit" className="btn btn-primary">Add Patient</button>
         </form>
     </div>
   )

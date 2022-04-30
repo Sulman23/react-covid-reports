@@ -1,9 +1,11 @@
 import AddPatients from "./components/AddPatients";
+import Login from "./components/Login";
 
 function App() {
   return (
     <div className="App">
-      <AddPatients /> 
+      {/* <AddPatients />  */}
+      <Login />
     </div>
   );
 }
