@@ -1,11 +1,12 @@
 import React from "react";
+import logo from "../../images/logo.png";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <img src="/public/images/logo.png" alt="Logo" />
+          <img className="logo-img" src={logo} alt="Logo" />
           <strong>SA Lab</strong>
         </a>
         <button

@@ -13,10 +13,10 @@ function App() {
       {/* <Login /> */}
       <Navbar />
       {/* <Home /> */}
-      {/* <AddPatients /> */}
+      <AddPatients />
       {/* <AllPatients /> */}
       {/* <EditPatient /> */}
-      <ViewPatient />
+      {/* <ViewPatient /> */}
       <Footer />
     </div>
   );
