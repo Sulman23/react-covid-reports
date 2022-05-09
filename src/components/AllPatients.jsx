@@ -1,6 +1,6 @@
 import React from "react";
-import { FaUserEdit } from "react-icons/fa";
-import { GrFormView } from "react-icons/gr";
+import { FaEdit } from "react-icons/fa";
+import { FaUserAlt } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
@@ -10,7 +10,7 @@ const AllPatients = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <h1>All Patients</h1>
+            <h1 className="text-center my-5">All Patients</h1>
             <table className="table table-bordered table-light text-center">
               <thead>
                 <tr>
@@ -37,17 +37,23 @@ const AllPatients = () => {
                   <td>Lahore, Pakistan</td>
                   <td>
                     <Link to="/edit">
-                      <GrFormView />
+                      <span className="text-success">
+                        <FaUserAlt />
+                      </span>
                     </Link>
                   </td>
                   <td>
                     <Link to="/edit">
-                      <FaUserEdit />
+                      <span className="text-primary">
+                        <FaEdit />
+                      </span>
                     </Link>
                   </td>
                   <td>
                     <Link to="/delete">
-                      <AiFillDelete />
+                      <span className="text-danger">
+                        <AiFillDelete />
+                      </span>
                     </Link>
                   </td>
                 </tr>
