@@ -4,7 +4,7 @@ import covid from "../images/covid.gif";
 
 const AddPatients = () => {
   // Creating State for Patient
-  const [patient, setPatient] = useState({
+  const [patients, setPatients] = useState({
     name: "",
     email: "",
     phone: "",
@@ -16,7 +16,7 @@ const AddPatients = () => {
   // Handling on Change for Inputs
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setPatient((prevVal) => {
+    setPatients((prevVal) => {
       return {
         ...prevVal,
         [name]: value,
@@ -28,7 +28,7 @@ const AddPatients = () => {
   // On Form Submition
   const handleSubmitForm = async (event) => {
     event.preventDefault();
-    await axios.post("http://localhost:3001/patients", patient);
+    await axios.post("http://localhost:3001/patients", patients);
   };
 
   return (
@@ -50,7 +50,7 @@ const AddPatients = () => {
                   type="text"
                   className="form-control"
                   id="name"
-                  value={patient.name}
+                  value={patients.name}
                   onChange={handleChange}
                   name="name"
                   placeholder="Jhon Doe"
@@ -64,7 +64,7 @@ const AddPatients = () => {
                   type="email"
                   className="form-control"
                   id="email"
-                  value={patient.email}
+                  value={patients.email}
                   onChange={handleChange}
                   name="email"
                   placeholder="email@email.com"
@@ -78,7 +78,7 @@ const AddPatients = () => {
                   type="number"
                   className="form-control"
                   id="phone"
-                  value={patient.phone}
+                  value={patients.phone}
                   onChange={handleChange}
                   name="phone"
                   placeholder="0123456789"
@@ -92,7 +92,7 @@ const AddPatients = () => {
                   type="number"
                   className="form-control"
                   id="age"
-                  value={patient.age}
+                  value={patients.age}
                   onChange={handleChange}
                   name="age"
                   placeholder="30"
@@ -106,7 +106,7 @@ const AddPatients = () => {
                   type="text"
                   className="form-control"
                   id="refer"
-                  value={patient.refer}
+                  value={patients.refer}
                   onChange={handleChange}
                   name="refer"
                   placeholder="Dr Ahmad"
@@ -119,7 +119,7 @@ const AddPatients = () => {
                 <textarea
                   className="form-control"
                   id="address"
-                  value={patient.address}
+                  value={patients.address}
                   onChange={handleChange}
                   rows="3"
                   name="address"
