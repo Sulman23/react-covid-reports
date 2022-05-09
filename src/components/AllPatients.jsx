@@ -2,6 +2,7 @@ import React from "react";
 import { FaUserEdit } from "react-icons/fa";
 import { GrFormView } from "react-icons/gr";
 import { AiFillDelete } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const AllPatients = () => {
   return (
@@ -35,13 +36,19 @@ const AllPatients = () => {
                   <td>Dr Ahmad</td>
                   <td>Lahore, Pakistan</td>
                   <td>
-                    <GrFormView />
+                    <Link to="/edit">
+                      <GrFormView />
+                    </Link>
                   </td>
                   <td>
-                    <FaUserEdit />
+                    <Link to="/edit">
+                      <FaUserEdit />
+                    </Link>
                   </td>
                   <td>
-                    <AiFillDelete />
+                    <Link to="/delete">
+                      <AiFillDelete />
+                    </Link>
                   </td>
                 </tr>
                 <tr>
