@@ -47,8 +47,8 @@ const AllPatients = () => {
                 
                 patients.map((patient, index) => (
     
-                  <tr>
-                    <th scope="row">{index}</th>
+                  <tr key={index}>
+                    <th scope="row">{index + 1}</th>
                     <td>patient.name</td>
                     <td>patient.email</td>
                     <td>patient.number</td>
