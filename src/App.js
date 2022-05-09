@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import AddPatients from "./components/AddPatients";
 import Home from "./components/Home";
 import Login from "./components/Login";
@@ -12,11 +13,13 @@ function App() {
     <div className="App">
       {/* <Login /> */}
       <Navbar />
-      {/* <Home /> */}
-      <AddPatients />
-      {/* <AllPatients /> */}
-      {/* <EditPatient /> */}
-      {/* <ViewPatient /> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/add" element={<AddPatients />} />
+        <Route path="/all" element={<AllPatients />} />
+        <Route path="/edit" element={<EditPatient />} />
+        <Route path="/view" element={<ViewPatient />} />
+      </Routes>
       <Footer />
     </div>
   );
