@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import covid from "../images/covid.gif";
 
@@ -25,9 +26,9 @@ const AddPatients = () => {
   };
 
   // On Form Submition
-  const handleSubmitForm = (event) => {
+  const handleSubmitForm = async (event) => {
     event.preventDefault();
-    alert(patient);
+    await axios.post("http://localhost:3001/patients", patient);
   };
 
   return (

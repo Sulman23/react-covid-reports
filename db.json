@@ -1,13 +1,76 @@
 {
-    "patients" : [
-        {
-            "id": 1,
-            "name": "Leanne Graham",    
-            "email": "Sincere@april.biz",
-            "phone": "123456",
-            "age": "30",
-            "refer": "dr Aslam",
-            "address": "Lahore, pakistan"
-        }
-    ]
+  "patients": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "email": "Sincere@april.biz",
+      "phone": "123456",
+      "age": "30",
+      "refer": "dr Aslam",
+      "address": "Lahore, pakistan"
+    },
+    {
+      "name": "jhon",
+      "email": "jhon@email.com",
+      "phone": "112233",
+      "age": "50",
+      "refer": "Dr Aslam",
+      "address": "Lahore, Pakistan",
+      "id": 2
+    },
+    {
+      "name": "jhon",
+      "email": "jhon@email.com",
+      "phone": "112233",
+      "age": "50",
+      "refer": "Dr Aslam",
+      "address": "Lahore, Pakistan",
+      "id": 3
+    },
+    {
+      "name": "jhon",
+      "email": "jhon@email.com",
+      "phone": "112233",
+      "age": "50",
+      "refer": "Dr Aslam",
+      "address": "Lahore, Pakistan",
+      "id": 4
+    },
+    {
+      "name": "jhon",
+      "email": "jhon@email.com",
+      "phone": "112233",
+      "age": "50",
+      "refer": "Dr Aslam",
+      "address": "Lahore, Pakistan",
+      "id": 5
+    },
+    {
+      "name": "jhon",
+      "email": "jhon@email.com",
+      "phone": "112233",
+      "age": "50",
+      "refer": "Dr Aslam",
+      "address": "Lahore, Pakistan",
+      "id": 6
+    },
+    {
+      "name": "jhon",
+      "email": "jhon@email.com",
+      "phone": "112233",
+      "age": "50",
+      "refer": "Dr Aslam",
+      "address": "Lahore, Pakistan",
+      "id": 7
+    },
+    {
+      "name": "jhon",
+      "email": "jhon@email.com",
+      "phone": "112233",
+      "age": "50",
+      "refer": "Dr Aslam",
+      "address": "Lahore, Pakistan",
+      "id": 8
+    }
+  ]
 }
