@@ -1,7 +1,7 @@
 import React from "react";
-import { FaEdit } from "react-icons/fa";
-import { FaUserAlt } from "react-icons/fa";
-import { AiFillDelete } from "react-icons/ai";
+// import { FaEdit } from "react-icons/fa";
+// import { FaUserAlt } from "react-icons/fa";
+// import { AiFillDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const AllPatients = () => {
@@ -38,21 +38,24 @@ const AllPatients = () => {
                   <td>
                     <Link to="/edit">
                       <span className="text-success">
-                        <FaUserAlt />
+                        {/* <FaUserAlt /> */}
+                        View
                       </span>
                     </Link>
                   </td>
                   <td>
                     <Link to="/edit">
                       <span className="text-primary">
-                        <FaEdit />
+                        {/* <FaEdit /> */}
+                        edit
                       </span>
                     </Link>
                   </td>
                   <td>
                     <Link to="/delete">
                       <span className="text-danger">
-                        <AiFillDelete />
+                        {/* <AiFillDelete /> */}
+                        Delete
                       </span>
                     </Link>
                   </td>
