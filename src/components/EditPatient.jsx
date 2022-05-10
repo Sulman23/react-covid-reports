@@ -1,12 +1,9 @@
 import axios from "axios";
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import covid from "../images/covid.gif";
 
 const EditPatient = () => {
-  // Getting ID by using use Parms Hook
-  const { id } = useParams();
-
   // Creating State for Patient
   const [patients, setPatients] = useState({
     name: "",
@@ -16,6 +13,23 @@ const EditPatient = () => {
     refer: "",
     address: "",
   });
+
+  // Getting ID by using use Parms Hook
+  const { id } = useParams();
+
+  // Defining Single getPatient by ID function
+  const getPatient = async () => {
+    const result = await axios.get(
+      `http://localhost:3001/patients/${id}`,
+      patients
+    );
+    setPatients(result.data);
+  };
+
+  // Getting Patients from DB by using useEffect hook
+  useEffect(() => {
+    getPatient();
+  }, []);
 
   // Handling on Change for Inputs
   const handleChange = (e) => {
@@ -29,22 +43,25 @@ const EditPatient = () => {
     // console.log(patient);
   };
 
+  // Navigate by using useNavigate after Submiting form
+  const navigate = useNavigate();
   // On Form Submition
   const handleSubmitForm = async (event) => {
     event.preventDefault();
-    await axios.post("http://localhost:3001/patients", patients);
+    await axios.put(`http://localhost:3001/patients/${patients.id}`, patients);
+    navigate("/all");
   };
 
   return (
     <>
       <div className="container">
-        <div className="row">
+        <div className="row my-3">
           <div className="col-md-6">
             <img src={covid} alt="covid-img" />
           </div>
 
           <div className="col-md-6">
-            <h3 className="text-center">Add New Patient</h3>
+            <h3 className="text-center">Edit Patient</h3>
             <form onSubmit={handleSubmitForm}>
               <div className="my-3">
                 <label htmlFor="name" className="form-label">
@@ -129,8 +146,8 @@ const EditPatient = () => {
                   name="address"
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-primary">
-                Add Patient
+              <button type="submit" className="btn btn-warning">
+                Update Patient
               </button>
             </form>
           </div>

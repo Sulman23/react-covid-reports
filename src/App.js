@@ -1,3 +1,4 @@
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import AddPatients from "./components/AddPatients";
 import Home from "./components/Home";
@@ -17,7 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/add" element={<AddPatients />} />
         <Route path="/all" element={<AllPatients />} />
-        <Route path="/edit:id" element={<EditPatient />} />
+        <Route path="/edit/:id" element={<EditPatient />} />
         <Route path="/view" element={<ViewPatient />} />
       </Routes>
       <Footer />
