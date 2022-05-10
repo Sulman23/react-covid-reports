@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios'
+import axios from "axios";
 // import { FaEdit } from "react-icons/fa";
 // import { FaUserAlt } from "react-icons/fa";
 // import { AiFillDelete } from "react-icons/ai";
@@ -9,18 +9,18 @@ import { Link } from "react-router-dom";
 const AllPatients = () => {
   // Defining State for Patients
   const [patients, setPatients] = useState([]);
-  
+  console.log(patients);
   // Defining getPatients function
   const getPatients = async () => {
-   const result = await axios.get("http://localhost:3001/patients", patients);
+    const result = await axios.get("http://localhost:3001/patients", patients);
     setPatients(result.data);
   };
-  
+
   // Getting Patients from DB by using useEffect hook
   useEffect(() => {
     getPatients();
   }, []);
-  
+
   return (
     <>
       <div className="container">
@@ -43,18 +43,16 @@ const AllPatients = () => {
                 </tr>
               </thead>
               <tbody>
-                { 
-                
-                patients.map((patient, index) => (
-    
+                {patients.map((patient, index) => (
                   <tr key={index}>
                     <th scope="row">{index + 1}</th>
-                    <td>patient.name</td>
-                    <td>patient.email</td>
-                    <td>patient.number</td>
-                    <td>patient.age</td>
-                    <td>patient.refer</td>
-                    <td>patient.address</td>
+                    {/* <td>{patient.id}</td> */}
+                    <td>{patient.name}</td>
+                    <td>{patient.email}</td>
+                    <td>{patient.phone}</td>
+                    <td>{patient.age}</td>
+                    <td>{patient.refer}</td>
+                    <td>{patient.address}</td>
                     <td>
                       <Link to="/edit">
                         <span className="text-success">
@@ -64,7 +62,7 @@ const AllPatients = () => {
                       </Link>
                     </td>
                     <td>
-                      <Link to="/edit">
+                      <Link to={`/edit/${patient.id}`}>
                         <span className="text-primary">
                           {/* <FaEdit /> */}
                           edit
