@@ -21,6 +21,12 @@ const AllPatients = () => {
     getPatients();
   }, []);
 
+  // Deleting Patient
+  const deletePatient = async (id) => {
+    // await axios.delete(`http://localhost:3001/patients/${id}`, patients);
+    // getPatients();
+  };
+
   return (
     <>
       <div className="container">
@@ -70,7 +76,7 @@ const AllPatients = () => {
                       </Link>
                     </td>
                     <td>
-                      <Link to="/delete">
+                      <Link onClick={() => deletePatient(patient.id)}>
                         <span className="text-danger">
                           {/* <AiFillDelete /> */}
                           Delete
