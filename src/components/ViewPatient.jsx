@@ -26,25 +26,20 @@ const ViewPatient = () => {
   return (
     <div>
       <div className="container">
+          <h2 className="text-center my-4">ViewPatient</h2>
+
+
         <div className="row my-3">
-          <h2 className="text-center">ViewPatient</h2>
           <div className="col-md-12">
-            <div className="row">
-              <div className="col-md-6">
-                <img src="" alt="" />
-              </div>
-              <div className="col-md-6">
-                <h3>SA Lab</h3>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-12">
-            <table class="table">
-              <thead>
+            <table className="table caption-top text-center">
+              <caption className="text-center text-dark">Patient Test Report <strong>ID {id}</strong></caption>
+              <thead className="table-light">
                 <tr>
-                  <th scope="col" colSpan="4" className="text-center">
-                    Patient Test Report <span>ID {id}</span>
-                  </th>
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -54,7 +49,7 @@ const ViewPatient = () => {
                   <td>{patients.email}</td>
                   <td>{patients.phone}</td>
                   <td>
-                    <button className="btn btn-primary">Print Report</button>
+                    <button className="btn btn-secondary">Print Report</button>
                   </td>
                 </tr>
               </tbody>
