@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import covid from "../images/covid.gif";
 
 const AddPatients = () => {
@@ -25,10 +26,13 @@ const AddPatients = () => {
     // console.log(patient);
   };
 
+  // Navigate to All Patients when Form Submitted
+  const navigate = useNavigate();
   // On Form Submition
   const handleSubmitForm = async (event) => {
     event.preventDefault();
     await axios.post("http://localhost:3001/patients", patients);
+    navigate("/all");
   };
 
   return (
