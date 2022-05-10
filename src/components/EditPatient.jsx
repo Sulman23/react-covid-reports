@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import covid from "../images/covid.gif";
+import logo from "../images/logo.png";
 
 const EditPatient = () => {
   // Creating State for Patient
@@ -55,13 +55,17 @@ const EditPatient = () => {
   return (
     <>
       <div className="container">
-        <div className="row my-3">
-          <div className="col-md-6">
-            <img src={covid} alt="covid-img" />
-          </div>
+        <div className="row my-4">
+        <div className="col-md-6 text-center">
+          <h1 className="mt-5">
+            <span className="text-info">SA</span> Lab
+          </h1>
+          <h3>Put on Mask and Stay Away</h3>
+          <img className="home-logo" src={logo} alt="logo" />
+        </div>
 
           <div className="col-md-6">
-            <h3 className="text-center">Edit Patient</h3>
+            <h3 className="text-center text-warning">Edit Patient</h3>
             <form onSubmit={handleSubmitForm}>
               <div className="my-3">
                 <label htmlFor="name" className="form-label">

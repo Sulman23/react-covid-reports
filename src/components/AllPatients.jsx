@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import { FaEdit } from "react-icons/fa";
-// import { FaUserAlt } from "react-icons/fa";
-// import { AiFillDelete } from "react-icons/ai";
+import { FaEdit } from "react-icons/fa";
+import { FaUserAlt } from "react-icons/fa";
+import { AiFillDelete } from "react-icons/ai";
 
 import { Link } from "react-router-dom";
 
@@ -32,7 +32,7 @@ const AllPatients = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <h1 className="text-center my-5">All Patients</h1>
+            <h1 className="text-center text-primary my-5">All Patients</h1>
             <table className="table table-bordered table-light text-center">
               <thead>
                 <tr>
@@ -62,16 +62,16 @@ const AllPatients = () => {
                     <td>
                       <Link to={`/view/${patient.id}`}>
                         <span className="text-success">
-                          {/* <FaUserAlt /> */}
-                          View
+                          <FaUserAlt />
+                          {/* View */}
                         </span>
                       </Link>
                     </td>
                     <td>
                       <Link to={`/edit/${patient.id}`}>
                         <span className="text-primary">
-                          {/* <FaEdit /> */}
-                          edit
+                          <FaEdit />
+                          {/* edit */}
                         </span>
                       </Link>
                     </td>
@@ -82,7 +82,12 @@ const AllPatients = () => {
                           Delete
                         </span>
                       </Link> */}
-                      <button onClick={() => deletePatient(patient.id)}>Delete</button>
+                      <button onClick={() => deletePatient(patient.id)}>
+                      <span className="text-danger">
+                          <AiFillDelete />
+                          {/* Delete */}
+                      </span>
+                      </button>
                     </td>
                   </tr>
                 ))}

@@ -26,7 +26,7 @@ const ViewPatient = () => {
   return (
     <div>
       <div className="container">
-          <h2 className="text-center my-4">ViewPatient</h2>
+          <h2 className="text-center text-primary my-4">ViewPatient</h2>
 
 
         <div className="row my-3">
