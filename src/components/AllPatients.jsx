@@ -23,8 +23,8 @@ const AllPatients = () => {
 
   // Deleting Patient
   const deletePatient = async (id) => {
-    // await axios.delete(`http://localhost:3001/patients/${id}`, patients);
-    // getPatients();
+    await axios.delete(`http://localhost:3001/patients/${id}`, patients);
+    getPatients();
   };
 
   return (
@@ -76,12 +76,13 @@ const AllPatients = () => {
                       </Link>
                     </td>
                     <td>
-                      <Link onClick={() => deletePatient(patient.id)}>
+                      {/* <Link onClick={() => deletePatient(patient.id)}>
                         <span className="text-danger">
-                          {/* <AiFillDelete /> */}
+                          <AiFillDelete />
                           Delete
                         </span>
-                      </Link>
+                      </Link> */}
+                      <button onClick={() => deletePatient(patient.id)}>Delete</button>
                     </td>
                   </tr>
                 ))}

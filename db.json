@@ -10,16 +10,7 @@
       "address": "Lahore, pakistan"
     },
     {
-      "name": "jhon",
-      "email": "jhon@email.com",
-      "phone": "112233",
-      "age": "50",
-      "refer": "Dr Aslam",
-      "address": "Lahore, Pakistan",
-      "id": 2
-    },
-    {
-      "name": "jhon Doe khan",
+      "name": "jhon Doe ",
       "email": "jhon@email.com",
       "phone": "112233",
       "age": "50",
@@ -28,49 +19,13 @@
       "id": 3
     },
     {
-      "name": "jhon",
-      "email": "jhon@email.com",
-      "phone": "112233",
-      "age": "50",
-      "refer": "Dr Aslam",
-      "address": "Lahore, Pakistan",
-      "id": 4
-    },
-    {
-      "name": "jhon jagu",
+      "name": "Robert",
       "email": "jhon@email.com",
       "phone": "112233",
       "age": "50",
       "refer": "Dr Aslam",
       "address": "Lahore, Pakistan",
       "id": 5
-    },
-    {
-      "name": "jhon",
-      "email": "jhon@email.com",
-      "phone": "112233",
-      "age": "50",
-      "refer": "Dr Aslam",
-      "address": "Lahore, Pakistan",
-      "id": 6
-    },
-    {
-      "name": "jhon",
-      "email": "jhon@email.com",
-      "phone": "112233",
-      "age": "50",
-      "refer": "Dr Aslam",
-      "address": "Lahore, Pakistan",
-      "id": 7
-    },
-    {
-      "name": "jhon",
-      "email": "jhon@email.com",
-      "phone": "112233",
-      "age": "50",
-      "refer": "Dr Aslam",
-      "address": "Lahore, Pakistan",
-      "id": 8
     },
     {
       "name": "Smith",
@@ -80,6 +35,15 @@
       "refer": "Dr Ahmad",
       "address": "Fasilabad, Pakistan",
       "id": 9
+    },
+    {
+      "name": "Roger",
+      "email": "roger@email.com",
+      "phone": "112233455",
+      "age": "55",
+      "refer": "Dr Ahmad",
+      "address": "England",
+      "id": 10
     }
   ]
 }
