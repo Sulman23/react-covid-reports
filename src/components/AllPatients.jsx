@@ -54,7 +54,7 @@ const AllPatients = () => {
                     <td>{patient.refer}</td>
                     <td>{patient.address}</td>
                     <td>
-                      <Link to="/view">
+                      <Link to={`/view/${patient.id}`}>
                         <span className="text-success">
                           {/* <FaUserAlt /> */}
                           View
