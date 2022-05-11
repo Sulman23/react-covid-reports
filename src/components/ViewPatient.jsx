@@ -26,13 +26,14 @@ const ViewPatient = () => {
   return (
     <div>
       <div className="container">
-          <h2 className="text-center text-primary my-4">ViewPatient</h2>
-
+        <h2 className="text-center text-info my-4">ViewPatient</h2>
 
         <div className="row my-3">
           <div className="col-md-12">
             <table className="table caption-top text-center">
-              <caption className="text-center text-dark">Patient Test Report <strong>ID {id}</strong></caption>
+              <caption className="text-center text-dark">
+                Patient Test Report <strong>ID {id}</strong>
+              </caption>
               <thead className="table-light">
                 <tr>
                   <th scope="col">ID</th>

@@ -32,9 +32,9 @@ const AllPatients = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <h1 className="text-center text-primary my-5">All Patients</h1>
-            <table className="table table-bordered table-light text-center">
-              <thead>
+            <h1 className="text-center text-info my-5">All Patients</h1>
+            <table className="table table-bordered text-center">
+              <thead className="table-primary">
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Name</th>
@@ -83,10 +83,10 @@ const AllPatients = () => {
                         </span>
                       </Link> */}
                       <button onClick={() => deletePatient(patient.id)}>
-                      <span className="text-danger">
+                        <span className="text-danger">
                           <AiFillDelete />
                           {/* Delete */}
-                      </span>
+                        </span>
                       </button>
                     </td>
                   </tr>

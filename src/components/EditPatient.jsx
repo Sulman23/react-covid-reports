@@ -55,24 +55,25 @@ const EditPatient = () => {
   return (
     <>
       <div className="container">
-        <div className="row my-4">
-        <div className="col-md-6 text-center">
-          <h1 className="mt-5">
-            <span className="text-info">SA</span> Lab
-          </h1>
-          <h3>Put on Mask and Stay Away</h3>
-          <img className="home-logo" src={logo} alt="logo" />
-        </div>
+        <div className="row my-5">
+          <div className="col-md-6 text-center">
+            <h1 className="mt-5">
+              <span className="text-info">SA</span> Lab
+            </h1>
+            <h3>Put on Mask and Stay Away</h3>
+            <img className="home-logo" src={logo} alt="logo" />
+          </div>
 
           <div className="col-md-6">
             <h3 className="text-center text-warning">Edit Patient</h3>
-            <form onSubmit={handleSubmitForm}>
+            <form onSubmit={handleSubmitForm} className="mb-5 my-form">
               <div className="my-3">
                 <label htmlFor="name" className="form-label">
                   Full Name
                 </label>
                 <input
                   type="text"
+                  required
                   className="form-control"
                   id="name"
                   value={patients.name}
@@ -87,6 +88,7 @@ const EditPatient = () => {
                 </label>
                 <input
                   type="email"
+                  required
                   className="form-control"
                   id="email"
                   value={patients.email}
@@ -101,6 +103,7 @@ const EditPatient = () => {
                 </label>
                 <input
                   type="number"
+                  required
                   className="form-control"
                   id="phone"
                   value={patients.phone}
@@ -115,6 +118,7 @@ const EditPatient = () => {
                 </label>
                 <input
                   type="number"
+                  required
                   className="form-control"
                   id="age"
                   value={patients.age}
@@ -129,6 +133,7 @@ const EditPatient = () => {
                 </label>
                 <input
                   type="text"
+                  required
                   className="form-control"
                   id="refer"
                   value={patients.refer}
