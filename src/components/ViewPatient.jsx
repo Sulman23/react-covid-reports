@@ -34,7 +34,7 @@ const ViewPatient = () => {
               <caption className="text-center text-dark">
                 Patient Test Report <strong>ID {id}</strong>
               </caption>
-              <thead className="table-light">
+              <thead className="table-primary">
                 <tr>
                   <th scope="col">ID</th>
                   <th scope="col">Name</th>
