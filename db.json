@@ -1,49 +1,31 @@
 {
   "patients": [
     {
-      "id": 1,
-      "name": "Leanne Graham",
-      "email": "Sincere@april.biz",
-      "phone": "123456110",
-      "age": "30",
-      "refer": "dr Aslam",
-      "address": "Lahore, pakistan"
-    },
-    {
-      "name": "jhon Doe ",
+      "name": "Ahmad",
       "email": "jhon@email.com",
-      "phone": "112233444",
-      "age": "50",
-      "refer": "Dr Aslam",
-      "address": "Lahore, Pakistan",
-      "id": 3
-    },
-    {
-      "name": "Robert",
-      "email": "robert@email.com",
-      "phone": "112233",
-      "age": "50",
-      "refer": "Dr Aslam",
-      "address": "Lahore, Pakistan",
-      "id": 5
-    },
-    {
-      "name": "Smith",
-      "email": "smith@email.com",
-      "phone": "222111333",
+      "phone": "123456789",
       "age": "55",
-      "refer": "Dr Ahmad",
-      "address": "Fasilabad, Pakistan",
-      "id": 9
+      "refer": "Dr Aslam",
+      "address": "Faisalabad, Pakistan",
+      "id": 1
     },
     {
       "name": "Roger ",
       "email": "roger@email.com",
-      "phone": "111222333",
+      "phone": "987654333",
       "age": "53",
       "refer": "Dr Ahmad",
-      "address": "England",
-      "id": 10
+      "address": "London, UK",
+      "id": 2
+    },
+    {
+      "name": "James ",
+      "email": "james@email.com",
+      "phone": "1122335544",
+      "age": "41",
+      "refer": "Dr Aslam",
+      "address": "Boston, USA",
+      "id": 3
     }
   ]
 }

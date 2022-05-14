@@ -31,9 +31,9 @@ const AddPatients = () => {
   // On Form Submition
   const handleSubmitForm = async (event) => {
     event.preventDefault();
-    // await axios.post("http://localhost:3001/patients", patients);
+    await axios.post("http://localhost:3001/patients", patients);
     // for Heroku
-    await axios.post("/patients", patients);
+    // await axios.post("/patients", patients);
     navigate("/all");
   };
 

@@ -3,18 +3,20 @@ import axios from "axios";
 import { FaEdit } from "react-icons/fa";
 import { FaUserAlt } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { Link } from "react-router-dom";
 
 const AllPatients = () => {
   // Defining State for Patients
   const [patients, setPatients] = useState([]);
-  console.log(patients);
+  // console.log(patients);
   // Defining getPatients function
   const getPatients = async () => {
-    // const result = await axios.get("http://localhost:3001/patients", patients);
+    const result = await axios.get("http://localhost:3001/patients", patients);
     // for Heroku
-    const result = await axios.get("/patients", patients);
+    // const result = await axios.get("/patients", patients);
     setPatients(result.data);
   };
 
@@ -25,9 +27,18 @@ const AllPatients = () => {
 
   // Deleting Patient
   const deletePatient = async (id) => {
-    // await axios.delete(`http://localhost:3001/patients/${id}`, patients);
+    await axios.delete(`http://localhost:3001/patients/${id}`, patients);
+    // Tostify Notification
+    toast.error("Deleted Successfully!", {
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
     // for Heroku
-    await axios.delete(`/patients/${id}`, patients);
+    // await axios.delete(`/patients/${id}`, patients);
     getPatients();
   };
 
@@ -100,6 +111,7 @@ const AllPatients = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };
