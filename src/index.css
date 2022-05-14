@@ -5,6 +5,9 @@
 .home-logo {
   width: 350px;
 }
+.print-logo {
+  width: 120px;
+}
 .my-form {
   background-image: linear-gradient(to right, #86d4f5, #009bdb);
   padding: 20px;
