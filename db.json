@@ -5,6 +5,7 @@
       "email": "jhon@email.com",
       "phone": "123456789",
       "age": "55",
+      "gender": "Male",
       "refer": "Dr Aslam",
       "address": "Faisalabad, Pakistan",
       "id": 1
@@ -14,7 +15,9 @@
       "email": "roger@email.com",
       "phone": "987654333",
       "age": "53",
+      "gender": "Male",
       "refer": "Dr Ahmad",
+      "result": "Negtive",
       "address": "London, UK",
       "id": 2
     },
@@ -23,9 +26,33 @@
       "email": "james@email.com",
       "phone": "1122335544",
       "age": "41",
+      "gender": "Male",
       "refer": "Dr Aslam",
+      "result": "Negtive",
       "address": "Boston, USA",
       "id": 3
+    },
+    {
+      "name": "Roger ",
+      "email": "jhon@email.com",
+      "phone": "123546465",
+      "age": "43",
+      "gender": "Male",
+      "refer": "Dr Ahmad",
+      "result": "Postive",
+      "address": "Lahore, Pakistan",
+      "id": 4
+    },
+    {
+      "name": "Nina",
+      "email": "nina@email.com",
+      "phone": "111222332",
+      "age": "53",
+      "gender": "Female",
+      "refer": "Dr James",
+      "result": "Postive",
+      "address": "Boston, USA",
+      "id": 5
     }
   ]
 }

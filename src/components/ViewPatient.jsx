@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { useReactToPrint } from "react-to-print";
 import Print from "./Print";
+import logo from "../images/logo.png";
 
 const ViewPatient = () => {
   // Defining State
@@ -37,7 +38,6 @@ const ViewPatient = () => {
     <>
       <div className="container">
         <h2 className="text-center text-info my-4">ViewPatient</h2>
-
         <div className="row my-3">
           <div className="col-md-12">
             <table className="table caption-top text-center">
@@ -73,11 +73,11 @@ const ViewPatient = () => {
           </div>
         </div>
 
-        <div className="container" ref={componentRef}>
+        <div className="container p-5" ref={componentRef}>
           <h3 className="text-center">Patient Test Report</h3>
           <div className="row">
             <div className="col-md-12 text-center">
-              <img src="" alt="logo" className="print-logo" />
+              <img src={logo} alt="logo" className="print-logo" />
               <h6>SA Lab Faisalabad, Pakistan</h6>
               <hr />
             </div>
@@ -92,23 +92,23 @@ const ViewPatient = () => {
                 <tbody>
                   <tr>
                     <th>Patient ID:</th>
-                    <td>10</td>
+                    <td>{patients.id}</td>
                     <th>Name:</th>
-                    <td>Ahmad Ali</td>
+                    <td>{patients.name}</td>
                     <th>Email:</th>
-                    <td>ahmad@email.com</td>
+                    <td>{patients.email}</td>
                     <th>Phone Number:</th>
-                    <td>03211234567</td>
+                    <td>{patients.phone}</td>
                   </tr>
                   <tr>
                     <th>Age:</th>
-                    <td>30</td>
+                    <td>{patients.age}</td>
                     <th>Referd By:</th>
-                    <td>DR Ali</td>
+                    <td>{patients.refer}</td>
                     <th>Address:</th>
-                    <td>Lahore, Pakistan</td>
+                    <td>{patients.address}</td>
                     <th>Gender:</th>
-                    <td>Male</td>
+                    <td>{patients.gender}</td>
                   </tr>
                 </tbody>
               </table>
@@ -131,7 +131,7 @@ const ViewPatient = () => {
                 <tbody>
                   <tr>
                     <td>Covid 19</td>
-                    <th>Negtive</th>
+                    <th>{patients.result}</th>
                     <td>Negtive/Postive</td>
                   </tr>
                 </tbody>

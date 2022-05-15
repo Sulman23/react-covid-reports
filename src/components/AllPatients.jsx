@@ -56,6 +56,7 @@ const AllPatients = () => {
                   <th scope="col">Email</th>
                   <th scope="col">Phone</th>
                   <th scope="col">Age</th>
+                  <th scope="col">Gender</th>
                   <th scope="col">Refered By</th>
                   <th scope="col">Address</th>
                   <th scope="col" colSpan="3">
@@ -72,6 +73,7 @@ const AllPatients = () => {
                     <td>{patient.email}</td>
                     <td>{patient.phone}</td>
                     <td>{patient.age}</td>
+                    <td>{patient.gender}</td>
                     <td>{patient.refer}</td>
                     <td>{patient.address}</td>
                     <td>

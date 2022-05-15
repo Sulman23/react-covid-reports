@@ -10,7 +10,9 @@ const EditPatient = () => {
     email: "",
     phone: "",
     age: "",
+    gender: "",
     refer: "",
+    result: "",
     address: "",
   });
 
@@ -133,6 +135,21 @@ const EditPatient = () => {
                 />
               </div>
               <div className="mb-3">
+                <label htmlFor="gender" className="form-label">
+                  Gender
+                </label>
+                <input
+                  type="text"
+                  required
+                  className="form-control"
+                  id="gender"
+                  value={patients.gender}
+                  onChange={handleChange}
+                  name="gender"
+                  placeholder="Male/Female"
+                />
+              </div>
+              <div className="mb-3">
                 <label htmlFor="refer" className="form-label">
                   Refered by DR
                 </label>
@@ -145,6 +162,21 @@ const EditPatient = () => {
                   onChange={handleChange}
                   name="refer"
                   placeholder="Dr Ahmad"
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="result" className="form-label">
+                  Test result
+                </label>
+                <input
+                  type="text"
+                  required
+                  className="form-control"
+                  id="result"
+                  value={patients.result}
+                  onChange={handleChange}
+                  name="result"
+                  placeholder="Negtive/Postive"
                 />
               </div>
               <div className="mb-3">
