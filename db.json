@@ -1,16 +1,6 @@
 {
   "patients": [
     {
-      "name": "Ahmad",
-      "email": "jhon@email.com",
-      "phone": "123456789",
-      "age": "55",
-      "gender": "Male",
-      "refer": "Dr Aslam",
-      "address": "Faisalabad, Pakistan",
-      "id": 1
-    },
-    {
       "name": "Roger ",
       "email": "roger@email.com",
       "phone": "987654333",
@@ -66,37 +56,15 @@
       "id": 7
     },
     {
-      "name": "Ahmad",
+      "name": "Robert",
       "email": "jhon@email.com",
-      "phone": "123456445",
-      "age": "43",
+      "phone": "1122334454",
+      "age": "51",
       "gender": "Male",
       "refer": "Dr James",
-      "result": "Postive",
-      "address": "Newyork, USA",
-      "id": 8
-    },
-    {
-      "name": "Roger ",
-      "email": "roger@email.com",
-      "phone": "444555566",
-      "age": "75",
-      "gender": "Male",
-      "refer": "Dr Ahmad",
-      "result": "Postive",
-      "address": "Finland",
-      "id": 9
-    },
-    {
-      "name": "Mudassar",
-      "email": "mud@email.com",
-      "phone": "03216760614",
-      "age": "35",
-      "gender": "Male",
-      "refer": "Dr Suleman",
       "result": "Negtive",
-      "address": "Chiniot, Pakistan",
-      "id": 10
+      "address": "Norway",
+      "id": 11
     }
   ]
 }

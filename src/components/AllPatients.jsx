@@ -14,9 +14,9 @@ const AllPatients = () => {
   // console.log(patients);
   // Defining getPatients function
   const getPatients = async () => {
-    const result = await axios.get("http://localhost:3001/patients", patients);
+    // const result = await axios.get("http://localhost:3001/patients", patients);
     // for Heroku
-    // const result = await axios.get("/patients", patients);
+    const result = await axios.get("/patients", patients);
     setPatients(result.data);
   };
 
@@ -27,7 +27,11 @@ const AllPatients = () => {
 
   // Deleting Patient
   const deletePatient = async (id) => {
-    await axios.delete(`http://localhost:3001/patients/${id}`, patients);
+    // await axios.delete(`http://localhost:3001/patients/${id}`, patients);
+    // for Heroku
+    await axios.delete(`/patients/${id}`, patients);
+    getPatients();
+
     // Tostify Notification
     toast.error("Deleted Successfully!", {
       autoClose: 1000,
@@ -37,9 +41,6 @@ const AllPatients = () => {
       draggable: true,
       progress: undefined,
     });
-    // for Heroku
-    // await axios.delete(`/patients/${id}`, patients);
-    getPatients();
   };
 
   return (

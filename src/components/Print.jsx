@@ -13,14 +13,12 @@ const Print = () => {
 
   // Defining Single getPatient by ID function
   const getPatient = async () => {
-    const result = await axios.get(
-      `http://localhost:3001/patients/${id}`,
-      patients
-    );
+    // const result = await axios.get(
+    //   `http://localhost:3001/patients/${id}`,
+    //   patients
+    // );
     // for Heroku
-    // const result = await axios.get(`/patients/${id}`, patients);
-    console.log(result.data);
-
+    const result = await axios.get(`/patients/${id}`, patients);
     setPatients(result.data);
   };
   // Getting Patients from DB by using useEffect hook

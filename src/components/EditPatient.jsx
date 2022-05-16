@@ -21,12 +21,12 @@ const EditPatient = () => {
 
   // Defining Single getPatient by ID function
   const getPatient = async () => {
-    const result = await axios.get(
-      `http://localhost:3001/patients/${id}`,
-      patients
-    );
+    // const result = await axios.get(
+    //   `http://localhost:3001/patients/${id}`,
+    //   patients
+    // );
     // for Heroku
-    // const result = await axios.get(`/patients/${id}`, patients);
+    const result = await axios.get(`/patients/${id}`, patients);
     setPatients(result.data);
   };
 
@@ -52,10 +52,10 @@ const EditPatient = () => {
   // On Form Submition
   const handleSubmitForm = async (event) => {
     event.preventDefault();
-    await axios.put(`http://localhost:3001/patients/${patients.id}`, patients);
+    // await axios.put(`http://localhost:3001/patients/${patients.id}`, patients);
 
     // for Heroku
-    // await axios.put(`/patients/${patients.id}`, patients);
+    await axios.put(`/patients/${patients.id}`, patients);
     navigate("/all");
   };
 
