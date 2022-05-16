@@ -48,7 +48,7 @@ const AllPatients = () => {
         <div className="row">
           <div className="col-md-12">
             <h1 className="text-center text-info my-5">All Patients</h1>
-            <table className="table table-bordered text-center">
+            <table className="table table-bordered text-center all-table">
               <thead className="table-primary">
                 <tr>
                   <th scope="col">#</th>

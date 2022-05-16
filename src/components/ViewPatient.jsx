@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-import { useReactToPrint } from "react-to-print";
 import Print from "./Print";
 import logo from "../images/logo.png";
 
@@ -28,12 +27,6 @@ const ViewPatient = () => {
     getPatient();
   }, []);
 
-  const componentRef = useRef();
-
-  // for Printing Report
-  const handlePrint = useReactToPrint({
-    content: () => componentRef.current,
-  });
   return (
     <>
       <div className="container">
@@ -60,12 +53,12 @@ const ViewPatient = () => {
                   <td>{patients.email}</td>
                   <td>{patients.phone}</td>
                   <td>
-                    {/* <Link to="/print" className="btn btn-secondary">
-                      Print Report
-                    </Link> */}
-                    <button onClick={handlePrint} className="btn btn-secondary">
-                      Print Report
-                    </button>
+                    <Link
+                      to={`/print/${patients.id}`}
+                      className="btn btn-primary"
+                    >
+                      Report
+                    </Link>
                   </td>
                 </tr>
               </tbody>
@@ -73,7 +66,7 @@ const ViewPatient = () => {
           </div>
         </div>
 
-        <div className="container p-5" ref={componentRef}>
+        {/* <div className="container p-5" ref={componentRef}>
           <h3 className="text-center">Patient Test Report</h3>
           <div className="row">
             <div className="col-md-12 text-center">
@@ -138,7 +131,7 @@ const ViewPatient = () => {
               </table>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -1,10 +1,53 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import logo from "../images/logo.png";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+import { useReactToPrint } from "react-to-print";
+import PrintFooter from "./PrintFooter";
 
 const Print = () => {
+  // Defining State
+  const [patients, setPatients] = useState({});
+  // Getting Patient by using ID
+  const { id } = useParams();
+
+  // Defining Single getPatient by ID function
+  const getPatient = async () => {
+    const result = await axios.get(
+      `http://localhost:3001/patients/${id}`,
+      patients
+    );
+    // for Heroku
+    // const result = await axios.get(`/patients/${id}`, patients);
+    console.log(result.data);
+
+    setPatients(result.data);
+  };
+  // Getting Patients from DB by using useEffect hook
+  useEffect(() => {
+    getPatient();
+  }, []);
+
+  const componentRef = useRef();
+
+  // for Printing Report
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
+
   return (
     <>
-      <div className="container">
+      <div className="row">
+        <div className="col-md-12">
+          <div className="container d-flex justify-content-end pt-3">
+            <button onClick={handlePrint} className="btn btn-secondary">
+              Print Report
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="container p-5" ref={componentRef}>
         <h3 className="text-center">Patient Test Report</h3>
         <div className="row">
           <div className="col-md-12 text-center">
@@ -23,29 +66,29 @@ const Print = () => {
               <tbody>
                 <tr>
                   <th>Patient ID:</th>
-                  <td>10</td>
+                  <td>{patients.id}</td>
                   <th>Name:</th>
-                  <td>Ahmad Ali</td>
+                  <td>{patients.name}</td>
                   <th>Email:</th>
-                  <td>ahmad@email.com</td>
+                  <td>{patients.email}</td>
                   <th>Phone Number:</th>
-                  <td>03211234567</td>
+                  <td>{patients.phone}</td>
                 </tr>
                 <tr>
                   <th>Age:</th>
-                  <td>30</td>
+                  <td>{patients.age}</td>
                   <th>Referd By:</th>
-                  <td>DR Ali</td>
+                  <td>{patients.refer}</td>
                   <th>Address:</th>
-                  <td>Lahore, Pakistan</td>
+                  <td>{patients.address}</td>
                   <th>Gender:</th>
-                  <td>Male</td>
+                  <td>{patients.gender}</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-        <div className="row">
+        <div className="row mt-5">
           <div className="col-md-12">
             <table className="table table-bordered border-secondary text-center caption-top">
               <caption className="text-center">
@@ -62,13 +105,14 @@ const Print = () => {
               <tbody>
                 <tr>
                   <td>Covid 19</td>
-                  <th>Negtive</th>
+                  <th>{patients.result}</th>
                   <td>Negtive/Postive</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
+        <PrintFooter />
       </div>
     </>
   );

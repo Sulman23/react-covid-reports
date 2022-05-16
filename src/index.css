@@ -18,3 +18,9 @@
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
+.print-footer {
+  margin-top: 400px;
+}
+.all-table {
+  margin-bottom: 80px !important;
+}
