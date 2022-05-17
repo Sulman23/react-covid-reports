@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../images/logo.png";
 
 const AddPatients = () => {
@@ -175,6 +175,9 @@ const AddPatients = () => {
               <button type="submit" className="btn btn-secondary">
                 Add Patient
               </button>
+              <Link className="btn btn-outline-danger" to="/">
+                Cancel
+              </Link>
             </form>
           </div>
         </div>
