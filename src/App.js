@@ -22,7 +22,7 @@ function App() {
         <Route path="/edit/:id" element={<EditPatient />} />
         <Route path="/view/:id" element={<ViewPatient />} />
         <Route path="/print/:id" element={<Print />} />
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
     </div>
