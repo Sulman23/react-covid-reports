@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import logo from "../images/logo.png";
 
 const EditPatient = () => {
@@ -195,6 +195,9 @@ const EditPatient = () => {
               <button type="submit" className="btn btn-warning">
                 Update Patient
               </button>
+              <Link className="btn btn-outline-danger" to="/all">
+                Cancel
+              </Link>
             </form>
           </div>
         </div>
