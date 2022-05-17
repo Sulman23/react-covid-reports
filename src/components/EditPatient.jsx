@@ -195,7 +195,7 @@ const EditPatient = () => {
               <button type="submit" className="btn btn-warning">
                 Update Patient
               </button>
-              <Link className="btn btn-outline-danger" to="/all">
+              <Link className="btn btn-danger ms-2" to="/all">
                 Cancel
               </Link>
             </form>

@@ -175,7 +175,7 @@ const AddPatients = () => {
               <button type="submit" className="btn btn-secondary">
                 Add Patient
               </button>
-              <Link className="btn btn-outline-danger" to="/">
+              <Link className="btn btn-danger ms-2" to="/">
                 Cancel
               </Link>
             </form>
