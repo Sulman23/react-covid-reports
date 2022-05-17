@@ -19,9 +19,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/add" element={<AddPatients />} />
         <Route path="/all" element={<AllPatients />} />
-        <Route path="/print/:id" element={<Print />} />
         <Route path="/edit/:id" element={<EditPatient />} />
         <Route path="/view/:id" element={<ViewPatient />} />
+        <Route path="/print/:id" element={<Print />} />
+        <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
     </div>
